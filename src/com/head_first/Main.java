@@ -1,14 +1,20 @@
 package com.head_first;
 
-import com.head_first.chapter1.*;
-import com.head_first.chapter2.Dog;
+import com.head_first.chapter2.DrumKit;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Dog barkie = new Dog();
+        DrumKit d = new DrumKit();
 
-        barkie.bark();
+        d.snare = false;
+
+        if (d.snare == true) {
+            d.playSnare();
+        }
+
+        d.playSnare();
+        d.playHiHat();
     }
 }
