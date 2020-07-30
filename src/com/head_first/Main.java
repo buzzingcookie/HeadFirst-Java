@@ -1,20 +1,31 @@
 package com.head_first;
-
 import com.head_first.chapter2.DrumKit;
+import com.head_first.chapter2.Echo;
 
 public class Main {
 
     public static void main(String[] args) {
+        Echo e1 = new Echo();
+        Echo e2 = new Echo();
 
-        DrumKit d = new DrumKit();
+        int x = 0;
 
-        d.snare = false;
+        while ( x < 4 ) {
 
-        if (d.snare == true) {
-            d.playSnare();
+            e1.hello();
+
+            e1.count = e1.count + 1;
+
+            if ( x > 0 ) {
+                e2.count = e2.count + 1;
+            }
+
+            if ( x > 1 ) {
+                e2.count = e2.count + e1.count;
+            }
+
+            x = x + 1;
         }
-
-        d.playSnare();
-        d.playHiHat();
+        System.out.println(e2.count);
     }
 }

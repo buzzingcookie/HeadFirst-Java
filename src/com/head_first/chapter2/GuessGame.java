@@ -52,7 +52,7 @@ public class GuessGame {
                 p3isRight = true;
             }
 
-            if(p1isRight || p2isRight || p3isRight) {
+            if( p1isRight || p2isRight || p3isRight )  {
 
                 if (p1isRight) {
                     System.out.println("The winner is " + p1.name);
