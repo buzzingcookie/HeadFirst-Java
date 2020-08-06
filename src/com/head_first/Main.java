@@ -1,31 +1,19 @@
 package com.head_first;
 import com.head_first.chapter2.DrumKit;
 import com.head_first.chapter2.Echo;
+import com.head_first.chapter2.Player;
 
 public class Main {
 
     public static void main(String[] args) {
-        Echo e1 = new Echo();
-        Echo e2 = new Echo();
 
-        int x = 0;
+        Player a = new Player();
+        Player b = new Player();
 
-        while ( x < 4 ) {
+        b = a;
 
-            e1.hello();
+        a.name = "Kristof";
 
-            e1.count = e1.count + 1;
-
-            if ( x > 0 ) {
-                e2.count = e2.count + 1;
-            }
-
-            if ( x > 1 ) {
-                e2.count = e2.count + e1.count;
-            }
-
-            x = x + 1;
-        }
-        System.out.println(e2.count);
+        System.out.println(b.name);
     }
 }

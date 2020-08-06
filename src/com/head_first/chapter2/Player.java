@@ -2,8 +2,8 @@ package com.head_first.chapter2;
 
 public class Player {
 
-    int number;
-    String name;
+    public int number;
+    public String name;
 
     public void guess() {
         number = (int) (Math.random() * 10);
